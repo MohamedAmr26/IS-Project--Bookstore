@@ -1,0 +1,55 @@
+.contributions{
+    margin: 100px 0;
+    padding: 0 70px;
+    background-image: url(Assets/banner-image-bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    padding: 100px 0;
+}
+.contributions > h1{
+    font-weight: 500;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--black);
+}
+.contributions .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contributions .container .card{
+    background-color: var(--black);
+    color: white;
+    width: 250px;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 5px 15px -10px black;
+    padding: 20px;
+    border: 1px solid var(--semiGray);
+    transition: .3s;
+}
+.contributions .container .card:hover{
+    transform: scale(1.05);
+    background-color: var(--semiPink);
+}
+.contributions .container .card h1{
+    text-align: center;
+}
+.contributions .container .userIMG{
+    background-image: url(Assets/programmer.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}

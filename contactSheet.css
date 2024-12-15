@@ -1,0 +1,7 @@
+.contributions .card i{
+    font-size: 5em;
+    margin: 40px 0;
+}
+.contributions .card{
+    cursor: pointer;
+}

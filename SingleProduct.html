@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookly - Blood on the Snow</title>
+  <link rel="icon" href="Assets/Favicon.ico">
+  <link rel="stylesheet" href="shopSheet.css">
+  <link rel="stylesheet" href="singleProductSheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a href="index.html">
+        <img src="Assets/Logo.png" class="logo" alt="Bookly">
+      </a>
+      <ul class="main_buttons">
+        <li><a href="./index.html">home</a></li>
+        <li><a href="./About.html">about</a></li>
+        <li><a href="./Shop.html">shop</a></li>
+        <li><a href="./blogs.html">blog</a></li>
+        <li><a href="./Contact.html">contact</a></li>
+</ul>
+      <ul class="user_buttons">
+        <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        <li><a href=""><i class="fa-regular fa-user"></i></a></li>
+        <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+        <li><a href=""><i class="fa-solid fa-cart-shopping"></i>(02)</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="path_current">
+    <p>Single Product</p>
+    <p><a href="index.html">Home ></a> <span>Single Product</span></p>
+  </section>
+  <section class="single_product">
+    <div class="container">
+      <aside class="product_details">
+        <div class="main-image-box">
+          <img src="Assets/Products/product-item1.png" id="mainImage" class="main-image">
+        </div>
+        <div class="small-images">
+          <div class="image-box-small-images"><img src="Assets/Products/product-item1.png" class="image"></div>
+          <div class="image-box-small-images"><img src="Assets/Products/product-item2.png" class="image"></div>
+          <div class="image-box-small-images"><img src="Assets/Products/product-item3.png" class="image"></div>
+        </div>
+      </aside>
+      <div class="details">
+        <h1>The Emerald Crown</h1>
+        <h2>234</h2>
+        <span class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </span>
+        <p>Justo, cum feugiat imperdiet nulla molestie ac vulputate scelerisque amet. Bibendum adipiscing platea blandit
+          sit sed quam semper rhoncus.</p>
+        <hr>
+        <div class="cart-wrap">
+          <div class="color-options">
+              <h4>Color</h4>
+              <ul>
+                <li>
+                  <a>Gray</a>
+                </li>
+                <li>
+                  <a>Blue</a>
+                </li>
+                <li>
+                  <a>White</a>
+                </li>
+              </ul>
+          </div>
+          <div class="size-options">
+            <h4>Size</h4>
+            <ul>
+              <li>
+                <a>S</a>
+              </li>
+              <li>
+                <a>M</a>
+              </li>
+              <li>
+                <a>L</a>
+              </li>
+            </ul>
+          </div>
+          <div class="stock">
+                <button type="button">-</button>
+                <input type="text" class="quantity" value="1" min="1" max="100" required="">
+                <button type="button">+</button>
+          </div>
+          <div class="actions">
+            <a>Order now</a>
+            <a>Add to cart</a>
+            <a><i class="fa-solid fa-heart"></i></a>
+          </div>
+        </div>
+        <hr>
+      </div>
+  </section>
+  <section class="Customers_Reviews">
+    <div class="container">
+        <h1 class="title">Customers Reviews</h1>
+        <div class="review_card">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dignissimos earum optio? Qui cupiditate consequuntur voluptatem incidunt maxime iure possimus fugiat quia totam, distinctio itaque, rem aut, ipsum in dolor!</p>
+            <span>
+                <span class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </span>
+                <h1>Emma Chamberlin</h1>    
+            </span>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="column1">
+        <img src="Assets/Logo.png" class="logo" alt="Bookly">
+    </div>
+    <div class="column2">
+        <h1>Contact us</h1>
+        <span>
+            <a><i class="fa-solid fa-location-dot"></i></a>
+            <h2>Lorem ipsum dolor sit amet, ipsum dolor</h2>
+        </span>
+        <span>
+            <a><i class="fa-solid fa-at"></i></a>
+            <h2>bookly_360@gmail.com</h2>
+        </span>
+    </div>
+    <div class="column3">
+        <h1>About Bookly</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quo ullam labore illum! Rerum nobis et quo voluptatum omnis dignissimos ea. Consectetur voluptatum a vel quo deserunt illo et perspiciatis!</p>
+        <span class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </span>
+    </div>
+</footer>
+
+    <script>
+      const mainimage = document.getElementById("mainImage");
+      const smallimages = document.getElementsByClassName("image-box-small-images");
+      for (let i = 0; i < smallimages.length; i++) {
+        smallimages[i].addEventListener("click", () => {
+          mainimage.setAttribute('src', `Assets/Products/product-item${i+1}.png`);
+        })
+      }
+    </script>
+</body>
+</html>

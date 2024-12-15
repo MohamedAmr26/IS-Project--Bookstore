@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Roboto Flex';
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+:root{
+    --black: #292728;
+    --semiPink: #f86c6f;
+    --semiGray: #e2e2e2;
+    --semiDarkGray: #a1a5a6;
+}
+nav .selected{
+    color: var(--black);
+}
+nav .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 10px 20px -17px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+ul a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black);
+    transition: 0.3s;
+    font-size: 17px;
+}
+nav .logo{
+    width: 100px;
+    height: fit-content;
+}
+
+.main_buttons a{
+    margin: 0 2em;
+}
+.user_buttons a{
+    margin: 0 .5em;
+    font-size: 1.2em;
+}
+
+.path_current{
+    color:var(--black);
+    background-image: url(Assets/banner-image-bg-1.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.path_current p:first-child{
+    font-size: 4em;
+    font-weight: 500;
+}
+.path_current p:last-child{
+    font-size: 1em;
+    margin: 10px 0;
+    font-weight: 200;
+}
+.path_current p:last-child a{
+    text-decoration: none;
+    color: var(--black);
+}
+.path_current p:last-child span{
+    text-decoration: underline;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.product_card{
+    display: flex;
+    flex-direction: column;
+    border: var(--semiGray) 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin: 10px;
+}
+.product_card img{
+    width: 200px;
+    height: fit-content;
+    align-self: center;
+    box-shadow: 2px 5px 15px -10px;
+}
+.product_card .det{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.author{
+    font-weight: 100;
+    font-size: 1em;
+    margin: 0px 10px 0px 0 ;
+    color: var(--semiDarkGray);
+}
+.product_card .name, .product_card .price{
+    font-weight: 500;
+    margin: 10px 0;
+}
+.product_card .name{
+    max-width: 180px;
+}
+
+.product_card .stars{
+    font-size: .8em;
+    color: gold;
+}
+.product_card .price, nav ul a{
+    margin-top: 10px;
+    color: var(--semiPink);
+}
+.product_card .price::before{
+    content: "$";
+}
+.interaction{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s;
+    opacity: 0;
+}
+.interaction a{
+    background-color: var(--black);
+    color: white;
+    border-radius: 100%;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+.product_card:hover > .interaction{
+    transform: translate(-50%, -70%);
+    opacity: 1;
+}
+.interaction a{transition: .3s;}
+.interaction a:hover{
+    background-color: var(--semiPink);
+}
+.filters{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.filters h1{
+    font-weight: 200;
+}
+.shop_container{
+    margin: 100px 0;
+    padding: 0px 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.shop_container main{
+    width: 100%;
+}
+.shop_container aside{
+    margin-right: 20px;
+}
+
+.search_bar{
+    border: var(--semiGray) 1px solid;
+    border-radius: 7px;
+    padding: 10px;
+    width: max-content;
+}
+.search_bar form{
+    display: flex;
+    align-items: center;
+}
+.search_bar input{
+    border: none;
+    font-size: 1.5em;
+    width: fit-content;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.search_bar input:focus-visible, .search_bar input:focus, .search_bar input:active{
+    outline: 0;
+}
+
+.search_bar button{
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--semiPink);
+    color: white;
+    font-size: 1em;
+    border: 0;
+    transition: .3s;
+}
+
+.search_bar button:hover{
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+.main_buttons a:hover, .user_buttons a:hover{
+    color: var(--black);
+}
+
+.aside_list{
+    display: block;
+}
+.aside_list li{
+    margin: 10px 0;
+    font-weight: 200;
+    color: var(--black);
+    cursor: pointer;
+    user-select: none;
+    transition: .3s;
+    font-size: 1.25em;
+}
+.aside_list li:hover{
+    color: var(--semiPink);
+}
+.shop_container aside h1{
+    margin-top: 50px;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+#sorting{
+    border: none;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+#sorting:focus-visible{
+    outline: none;
+}
+
+.Customers_Reviews .container{
+    color:var(--black);
+    background-image: url(Assets/banner-image-bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+    width: 100%;
+    height: 600px;
+    margin: 100px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Customers_Reviews .title{
+    margin-bottom: 50px;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.Customers_Reviews .review_card{
+    background-color: white;
+    border-radius: 15px;
+    width: 50vw;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 50px;
+    border: var(--semiGray) 1px solid;
+    box-shadow: 0px 10px 20px -17px;
+    transition: .4s;
+}
+
+.Customers_Reviews .review_card .stars{
+    margin-bottom: 10px;
+    display: block;
+    color: gold;
+    user-select: none;
+}
+
+.Customers_Reviews .review_card p{
+    font-size: 1.15em;
+    font-weight: 200;
+    line-height: 200%;
+    margin-bottom: 10px;
+}
+.Customers_Reviews .review_card p::before, .Customers_Reviews .review_card p::after{
+    content: '"';
+}
+.Customers_Reviews .review_card h1{
+    font-weight: 500;
+}
+
+.Customers_Reviews .review_card:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    display: flex;
+    margin-top: 200px;
+    padding: 70px 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer .column3 h1, footer .column2 h1{
+    font-weight: 500;
+    color: var(--black);
+}
+
+footer .column3 p{
+    line-height: 200%;
+    font-size: 1.25em;
+    max-width: 30vw;
+    padding: 20px 0;
+    font-weight: 200;
+    color: var(--black);
+}
+
+footer .social{
+    font-size: 2.5em;
+    display: flex;
+    color: var(--black);
+}
+footer img{
+    width: 150px;
+}
+footer .social i{
+    margin: 0 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+footer .social i:hover{
+    color: var(--semiPink);
+}
+
+footer .column1{
+    display: flex;
+    align-items: center;
+}
+footer .column2{
+    display: flex;
+    flex-direction: column;
+}
+footer .column2 span{
+    display: flex;
+    font-size: 1.15em;
+    margin: 20px 0;
+}
+footer .column2 h2{
+    font-size: 1em;
+    font-weight: 200;
+    margin: 10px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer .column2 span a{
+    font-size: 2em;
+    border-radius: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 20px -8px;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
